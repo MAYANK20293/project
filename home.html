@@ -1,0 +1,44 @@
+<!-- Updated HTML structure with added draggable attributes -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (your head content) ... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="kanban-board">
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>To Do</h3>
+            <div class="task-list" id="todo" ondragstart="drag(event)">
+                <!-- Tasks will be added here -->
+            </div>
+        </div>
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Doing</h3>
+            <div class="task-list" id="doing" ondragstart="drag(event)">
+                <!-- Tasks will be added here -->
+            </div>
+        </div>
+        <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Done</h3>
+            <div class="task-list" id="done" ondragstart="drag(event)">
+                <!-- Tasks will be added here -->
+            </div>
+        </div>
+    </div>
+    <div class="add-task">
+        <h3>Add Task</h3>
+        <form id="task-form">
+            <input type="text" id="title" placeholder="Title" required>
+            <textarea id="description" placeholder="Description" required></textarea>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <!-- ... (the rest of your HTML) ... -->
+
+    <script src="script.js"></script>
+</body>
+</html>

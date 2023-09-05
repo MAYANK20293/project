@@ -1,0 +1,104 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the entire page */
+body {
+    background-color: #f5f5f5; /* Change this color to your preferred background color */
+    font-family: Arial, sans-serif;
+}
+
+/* Style the Kanban board container */
+.kanban-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+/* Style each Kanban column */
+.column {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 30%;
+    margin: 0 10px;
+}
+
+/* Style column headings */
+.column h3 {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: -10px -10px 10px -10px;
+}
+
+/* Style task lists within columns */
+.task-list {
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Style the "Add Task" container */
+.add-task {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 30%;
+    margin: 20px auto;
+}
+
+/* Style the "Add Task" form */
+.add-task h3 {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: -20px -20px 20px -20px;
+}
+
+#title, #description {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Style the task cards for dragging */
+.task-card[draggable="true"] {
+    cursor: grab;
+}
+
+/* Style the task card when it's being dragged */
+.task-card[draggable="true"]:active {
+    cursor: grabbing;
+    opacity: 0.8; /* You can adjust the opacity as desired */
+}
+
+/* Style the drop targets (columns) when a task is dragged over them */
+.column {
+    border: 2px
